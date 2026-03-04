@@ -1,0 +1,12 @@
+ids-api-venv/
+.git/
+.idea/
+__pycache__/
+*.pyc
+datasets/
+imagenes/
+figuras/
+*.pcap
+logs/
+ids.db
+.claude/

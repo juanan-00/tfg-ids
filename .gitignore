@@ -1,0 +1,51 @@
+# Datasets (demasiado grandes para GitHub, 60GB)
+datasets/
+
+# Modelos entrenados (solo los necesarios para la app via LFS)
+models/*
+!models/modelo_rf_cic.joblib
+!models/modelo_rf_unsw.joblib
+
+# Entorno virtual
+ids-api-venv/
+
+# Base de datos local
+ids.db
+ids.db.bak
+
+# Capturas de red
+*.pcap
+*.pcapng
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+logs/
+
+# IDE
+.idea/
+.vscode/
+
+
+# Variables de entorno
+.env
+
+# Imágenes, figuras y presentación
+imagenes/
+figuras/
+presentacion_TFG.pptx
+
+# Archivos no imprescindibles
+bibliografia_extra.txt
+dependencias.txt
+dependencies_script.py
+decision_tree_cic.pkl
+
+# MLflow (experimentos de entrenamiento)
+src/modelos/mlruns/
+src/modelos/mlflow.db
+src/modelos/analisis_resultados/

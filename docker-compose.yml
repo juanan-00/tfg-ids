@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  ids-api:
+    build: .
+    container_name: ids-api
+    # Permisos de red para captura con scapy/cicflowmeter
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    # Compartir red del host para capturar trafico real
+    network_mode: host
+    volumes:
+      - ./logs:/app/logs
+      - ./ids.db:/app/ids.db
+    restart: unless-stopped
