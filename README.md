@@ -49,7 +49,7 @@ cd tfg-ids
 docker-compose up --build
 ```
 
-Esto levanta la API y el frontend automáticamente. Una vez iniciado:
+Esto inicia la API y el frontend automáticamente. Una vez iniciado:
 
 | Servicio | URL |
 |----------|-----|
@@ -114,7 +114,7 @@ streamlit run frontend.py
 1. Accede al dashboard en http://localhost:8501
 2. Selecciona la interfaz de red en el panel lateral
 3. Pulsa **Iniciar captura** para comenzar el análisis
-4. Las predicciones y alertas se actualizan automáticamente cada 2 segundos
+4. Las predicciones y alertas se actualizan automáticamente cada 10 segundos
 
 ### Análisis de archivos PCAP
 
@@ -141,33 +141,6 @@ Documentación interactiva completa disponible en http://localhost:8000/docs
 
 ---
 
-## Estructura del proyecto
-
-```
-tfg-ids/
-├── src/
-│   ├── api/
-│   │   └── api.py              # API REST (FastAPI)
-│   ├── modelos/
-│   │   ├── ModeloRandomForest.py
-│   │   ├── ModeloDecisionTree.py
-│   │   ├── ModeloKNN.py
-│   │   ├── ModeloNaiveBayes.py
-│   │   └── modeloSVM.py
-│   ├── database.py             # Base de datos SQLite
-│   ├── escanear_trafico_red.py # Captura de tráfico
-│   └── procesar_predicciones.py
-├── models/
-│   ├── modelo_rf_cic.joblib    # Modelo CIC-IDS2017 (tráfico en tiempo real)
-│   └── modelo_rf_unsw.joblib   # Modelo UNSW-NB15 (análisis PCAP)
-├── frontend.py                 # Dashboard Streamlit
-├── run.py                      # Punto de entrada
-├── Dockerfile
-├── docker-compose.yml
-└── requirements-docker.txt
-```
-
----
 
 ## Modelos de Machine Learning
 
